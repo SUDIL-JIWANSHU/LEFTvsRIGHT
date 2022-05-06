@@ -1,30 +1,50 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./style.css";
 const UseState=()=>{
-    const initialdata=10;
+    const initialdata=5;
     const [Num,setNum]=React.useState(initialdata)
-    function name(Num) {
-        if(Num===0)
-        return <h1>RIGHT WINS</h1>
+    const [show,setshow]=React.useState("")
+    useEffect(()=>{
         if(Num===10)
-        return <h1>LEFT WINS</h1>
+     setshow("LEFT WINS")
+     if(Num===0)
+     setshow("RIGHT WINS")
+    
+    })
+   
+   
+    function incHandler(){
+     setNum(Num+1);
+     if(Num==10)
+     {setNum(initialdata);
+        setshow("GAME RESTARTED")
+     }
     }
+    function decHandler(){
+        setNum(Num-1);
+        if(Num==0)
+        {setNum(initialdata);
+        setshow("GAME RESTARTED")}
+        
+       }
     return (
     <>
     
 <div className="center_div">
 <p>{Num}</p>
- 
-<div class="button2" onClick={() =>setNum(Num+1)}>
+ <div>
+     <p>{show}</p>
+ </div>
+<div class="button2" onClick={incHandler}>
     <span></span>
     <span></span>
-    INCR.
+    LEFT
 </div>
 {/* <div class="button2" onClick={()=>(Num>0?setNum(Num-1):setNum(0))}> */}
-<div class="button2" onClick={()=>setNum(Num-1)}>
+<div class="button2" onClick={decHandler}>
     <span></span>
     <span></span>
-   DECR.
+   RIGHT
 </div>
 </div>
     </>
