@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/LEFTvsRight/static/css/main.e7468afd.css",
+    "main.js": "/LEFTvsRight/static/js/main.93b98392.js",
+    "index.html": "/LEFTvsRight/index.html",
+    "main.e7468afd.css.map": "/LEFTvsRight/static/css/main.e7468afd.css.map",
+    "main.93b98392.js.map": "/LEFTvsRight/static/js/main.93b98392.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e7468afd.css",
+    "static/js/main.93b98392.js"
+  ]
+}
